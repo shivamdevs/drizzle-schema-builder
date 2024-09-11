@@ -1,0 +1,56 @@
+{
+    "name": "drizzle-schema-builder",
+    "version": "1.0.0",
+    "description": "Build Schemas for all query languages supported by Drizzle ORM.",
+    "workspaces": [
+        "src/packages/*"
+    ],
+    "main": "dist/index.js",
+    "scripts": {
+        "lint": "eslint . --ext .ts",
+        "lint:fix": "npm run lint -- --fix",
+        "lint:format": "npm run lint --fix & prettier --write \"./**/*.{js,json,ts}\"",
+        "predev": "npm i",
+        "dev": "npm run predev && npm run postdev",
+        "postdev": "node --trace-deprecation --inspect -r ts-node/register -r tsconfig-paths/register --watch-path=./src --watch src/index.ts",
+        "test": "node --trace-deprecation -r ts-node/register -r tsconfig-paths/register src/test/index.ts",
+        "b:pc": "rimraf out",
+        "b:dz": "drizzle-kit generate --config=drizzle.config.ts",
+        "b:rm": "rimraf out/meta",
+        "build": "npm run b:pc && npm run b:dz && npm run b:rm"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/shivamdevs/drizzle-schema-builder.git"
+    },
+    "keywords": [
+        "drizzle",
+        "drizzle-schema",
+        "drizzle-schema-builder"
+    ],
+    "author": "ShivamDevs",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/shivamdevs/drizzle-schema-builder/issues"
+    },
+    "homepage": "https://github.com/shivamdevs/drizzle-schema-builder#readme",
+    "devDependencies": {
+        "@types/node": "^22.5.4",
+        "@typescript-eslint/eslint-plugin": "^8.5.0",
+        "@typescript-eslint/parser": "^8.5.0",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-import-resolver-typescript": "^3.6.3",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "prettier": "^3.3.3",
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "drizzle-kit": "^0.24.2",
+        "drizzle-orm": "^0.33.0",
+        "postgres": "^3.4.4"
+    }
+}

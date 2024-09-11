@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": false,
+        "module": "commonjs",
+        "target": "es6",
+        "rootDir": "src",
+        "declaration": true,
+        "declarationMap": true,
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "dist",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types",
+            "./src/types"
+        ],
+        "baseUrl": "src",
+        "paths": {
+            "@/*": [
+                "/*"
+            ],
+        },
+    },
+    "lib": [
+        "es2015"
+    ],
+    "include": [
+        "src/**/*",
+        "drizzle.config.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        ".vscode",
+        ".temp",
+        "drizzle",
+        "drizzle.config.ts",
+        "drizzle.migrate.ts",
+        "package.json",
+        "package-lock.json",
+        ".eslintrc.json",
+        ".prettierrc.json"
+    ]
+}
