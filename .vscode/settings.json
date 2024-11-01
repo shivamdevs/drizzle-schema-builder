@@ -1,25 +1,27 @@
 {
     "cSpell.words": [
+        "bigserial",
         "Devs",
+        "Pincode",
         "postdev",
         "predev",
         "Shivam",
         "shivamdevs"
     ],
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "node_modules/": true,
-        ".eslintrc.json": true,
-        ".prettierrc": true,
-        ".gitingore": true,
-        "package-lock.json": true,
-        "tsconfig.json": true,
-        "LICENSE": true,
-        ".vscode/": true
+        // "**/.git": true,
+        // "**/.svn": true,
+        // "**/.hg": true,
+        // "**/CVS": true,
+        // "**/.DS_Store": true,
+        // "**/Thumbs.db": true,
+        // "node_modules/": true,
+        // ".eslintrc.json": true,
+        // ".prettierrc": true,
+        // ".gitingore": true,
+        // "package-lock.json": true,
+        // "tsconfig.json": true,
+        // "LICENSE": true,
+        // ".vscode/": true
     }
 }

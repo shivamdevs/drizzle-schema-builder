@@ -1,11 +1,11 @@
-import * as schemaName from "../schemas/schemaName";
+// import * as schemaName from "../schemas/schemaName";
 
 const schema = {
-    schemaName: schemaName.schema,
+    //     schemaName: schemaName.schema,
 };
 
 export const schemaList = {
-    ...schemaName,
+    //     ...schemaName,
 };
 
 export default schema;
